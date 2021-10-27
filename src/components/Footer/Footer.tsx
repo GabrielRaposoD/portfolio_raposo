@@ -7,11 +7,19 @@ const Footer: React.FC = () => {
   return (
     <footer className='bg-gray w-full py-[50px]'>
       <div className=' container flex flex-col items-center justify-center mx-auto'>
-        <div className='gap-x-5 flex flex-row mb-5'>
-          {FOOTER_LINKS.map((item) => (
-            <FooterIcon href={item.href} Icon={item.Icon} />
-          ))}
-        </div>
+        <nav>
+          <ul className='gap-x-5 flex flex-row mb-5'>
+            {FOOTER_LINKS.map((item) => (
+              <li>
+                <FooterIcon
+                  href={item.href}
+                  Icon={item.Icon}
+                  title={item.title}
+                />
+              </li>
+            ))}
+          </ul>
+        </nav>
         <p className='text-sm leading-6'>
           Copyright © {year} - All Right Reserved.
         </p>
