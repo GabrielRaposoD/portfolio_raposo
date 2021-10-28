@@ -3,7 +3,13 @@ module.exports = {
   purge: ['./src/{components,pages,layout,screens}/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      teko: ['Teko'],
+    },
     extend: {
+      backgroundImage: {
+        'header-bg': "url('/images/fox-bg.png')",
+      },
       colors: {
         lightGray: '#191C22',
         gray: '#0C0F16',

@@ -1,9 +1,9 @@
-import { Footer } from 'components';
-import Head from 'next/head';
+import { Footer, Header } from 'components';
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen text-white'>
+    <div className='flex flex-col min-h-screen text-white'>
+      <Header />
       <Footer />
     </div>
   );

@@ -5,12 +5,12 @@ const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className='bg-gray w-full py-[50px]'>
+    <footer className='bg-gray w-full py-[50px] min-h-[2000px]' id='footer'>
       <div className=' container flex flex-col items-center justify-center mx-auto'>
         <nav>
           <ul className='gap-x-5 flex flex-row mb-5'>
-            {FOOTER_LINKS.map((item) => (
-              <li>
+            {FOOTER_LINKS.map((item, i) => (
+              <li key={i}>
                 <FooterIcon
                   href={item.href}
                   Icon={item.Icon}
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             ))}
           </ul>
         </nav>
-        <p className='text-sm leading-6'>
+        <p className='font-sans text-sm leading-6'>
           Copyright © {year} - All Right Reserved.
         </p>
         <p className='text-sm leading-6'>Designed by Gabriel Raposo.</p>
