@@ -18,4 +18,6 @@ const FOOTER_LINKS = [
   },
 ];
 
-export { FOOTER_LINKS };
+const SECTIONS = ['home', 'about', 'service', 'resume', 'portfolio', 'contact'];
+
+export { FOOTER_LINKS, SECTIONS };

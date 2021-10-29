@@ -1,1 +1,9 @@
 @tailwind utilities;
+
+@layer utilities {
+  .bg-blur {
+    --tw-backdrop-blur: blur(32px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur);
+    backdrop-filter: var(--tw-backdrop-blur);
+  }
+}

@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className='bg-gray w-full py-[50px] min-h-[2000px]' id='footer'>
+    <footer className='bg-gray w-full py-[50px]' id='footer'>
       <div className=' container flex flex-col items-center justify-center mx-auto'>
         <nav>
           <ul className='gap-x-5 flex flex-row mb-5'>
