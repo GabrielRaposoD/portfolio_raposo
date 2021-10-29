@@ -1,5 +1,11 @@
 export { Footer } from './Footer';
 export { Header } from './Header';
+export { AboutMe } from './AboutMe';
+export { Resume } from './Resume';
+export { Portfolio } from './Portfolio';
+export { MyService } from './MyService';
+export { Contact } from './Contact';
 export { FooterIcon } from './FooterIcon';
 export { OutlinedAnchorButton } from './OutlinedAnchorButton';
 export { NavBar } from './NavBar';
+export { SectionTitle } from './SectionTitle';
