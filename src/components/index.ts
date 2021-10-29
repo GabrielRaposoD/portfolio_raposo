@@ -6,6 +6,7 @@ export { Portfolio } from './Portfolio';
 export { MyService } from './MyService';
 export { Contact } from './Contact';
 export { FooterIcon } from './FooterIcon';
-export { OutlinedAnchorButton } from './OutlinedAnchorButton';
+export { OutlinedAnchor } from './OutlinedAnchor';
 export { NavBar } from './NavBar';
 export { SectionTitle } from './SectionTitle';
+export { ActionButton } from './ActionButton';

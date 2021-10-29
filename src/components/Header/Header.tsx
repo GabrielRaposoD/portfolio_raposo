@@ -1,7 +1,7 @@
 import Typewriter from 'typewriter-effect';
 import { FOOTER_LINKS } from 'utils/constants';
 import Link from 'next/link';
-import { OutlinedAnchorButton } from 'components';
+import { OutlinedAnchor } from 'components';
 
 const Header: React.FC = () => {
   return (
@@ -52,8 +52,8 @@ const Header: React.FC = () => {
         </ul>
       </nav>
       <div className='flex flex-row gap-x-[15px]'>
-        <OutlinedAnchorButton id='work' text='View Work' />
-        <OutlinedAnchorButton id='contact' text='Hire Me' />
+        <OutlinedAnchor id='portfolio' text='View Work' />
+        <OutlinedAnchor id='contact' text='Hire Me' />
       </div>
     </header>
   );
