@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { SECTIONS } from 'utils/constants';
+import cs from 'clsx';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useState } from 'react';
-import cs from 'clsx';
 
 const NavBar: React.FC = () => {
   const [isBlur, setIsBlur] = useState<boolean>(false);
@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
       <div className='container flex flex-row items-center justify-between mx-auto'>
         <Link href='#header'>
           <a className='text-[28px] font-extrabold'>
-            <span className='text-secondary'>Ra</span>poso
+            <span className='text-purple-600'>Ra</span>poso
           </a>
         </Link>
         <ul className='flex flex-row gap-x-2.5 text-sm leading-6 font-medium tracking-[0.5px]'>
