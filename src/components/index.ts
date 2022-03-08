@@ -10,3 +10,6 @@ export { OutlinedAnchor } from './OutlinedAnchor';
 export { NavBar } from './NavBar';
 export { SectionTitle } from './SectionTitle';
 export { ActionButton } from './ActionButton';
+export { ServiceItem } from './ServiceItem';
+export { ResumeItem } from './ResumeItem';
+export { CustomInput } from './CustomInput';

@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           </ul>
         </nav>
         <p className='font-sans text-sm leading-6'>
-          Copyright © {year} - All Right Reserved.
+          Copyright © {year} - All Rights Reserved.
         </p>
         <p className='text-sm leading-6'>Designed by Gabriel Raposo.</p>
       </div>

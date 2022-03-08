@@ -25,6 +25,7 @@ const Header: React.FC = () => {
               .deleteAll()
               .typeString(' a React Specialist')
               .pauseFor(1000)
+              .deleteAll()
               .typeString(' a Fullstack Developer')
               .pauseFor(1000)
               .start();
