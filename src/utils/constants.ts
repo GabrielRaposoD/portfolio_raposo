@@ -1,4 +1,9 @@
-import { RiInstagramLine, RiLinkedinLine, RiGithubLine } from 'react-icons/ri';
+import {
+  RiGithubLine,
+  RiInstagramLine,
+  RiLinkedinLine,
+  RiTerminalBoxLine,
+} from 'react-icons/ri';
 
 const FOOTER_LINKS = [
   {
@@ -18,6 +23,70 @@ const FOOTER_LINKS = [
   },
 ];
 
-const SECTIONS = ['home', 'about', 'service', 'resume', 'portfolio', 'contact'];
+const SECTIONS = [
+  'header',
+  'about',
+  'service',
+  'resume',
+  'portfolio',
+  'contact',
+];
 
-export { FOOTER_LINKS, SECTIONS };
+const SERVICES = [
+  {
+    title: 'Web Development',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+    Icon: RiTerminalBoxLine,
+  },
+  {
+    title: 'Web Development',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+    Icon: RiTerminalBoxLine,
+  },
+  {
+    title: 'Web Development',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+    Icon: RiTerminalBoxLine,
+  },
+  {
+    title: 'Web Development',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+    Icon: RiTerminalBoxLine,
+  },
+  {
+    title: 'Web Development',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+    Icon: RiTerminalBoxLine,
+  },
+];
+
+const TIMELINE = [
+  {
+    title: 'Web Development',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+    startDate: '2020',
+    endDate: '2021',
+  },
+  {
+    title: 'Web Development',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+    startDate: '2020',
+    endDate: '2021',
+  },
+  {
+    title: 'Web Development',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+    startDate: '2020',
+    endDate: '2021',
+  },
+];
+
+export { FOOTER_LINKS, SECTIONS, SERVICES, TIMELINE };
