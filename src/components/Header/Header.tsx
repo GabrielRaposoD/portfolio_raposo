@@ -1,13 +1,13 @@
-import Typewriter from 'typewriter-effect';
 import { FOOTER_LINKS } from 'utils/constants';
 import Link from 'next/link';
 import { OutlinedAnchor } from 'components';
+import Typewriter from 'typewriter-effect';
 
 const Header: React.FC = () => {
   return (
     <header
       className='bg-black w-full pt-[100px] items-center justify-center flex flex-col text-lg bg-header-bg bg-no-repeat min-h-[660px] bg-cover bg-fixed bg-center'
-      id='home'
+      id='header'
     >
       <h3 className='uppercase font-medium tracking-[3px] mb-[25px]'>
         Welcome To My Website
@@ -20,10 +20,12 @@ const Header: React.FC = () => {
               .typeString(' Gabriel Raposo')
               .pauseFor(1000)
               .deleteAll()
-              .typeString(' Web Developer')
+              .typeString(' a Software Engineer')
               .pauseFor(1000)
               .deleteAll()
-              .typeString(' Software Engineer')
+              .typeString(' a React Specialist')
+              .pauseFor(1000)
+              .typeString(' a Fullstack Developer')
               .pauseFor(1000)
               .start();
           }}
