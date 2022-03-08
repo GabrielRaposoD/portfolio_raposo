@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   return (
     <header
       className='bg-black w-full pt-[100px] items-center justify-center flex flex-col text-lg bg-header-bg bg-no-repeat min-h-[660px] bg-cover bg-fixed bg-center'
-      id='header'
+      id='home'
     >
       <h3 className='uppercase font-medium tracking-[3px] mb-[25px]'>
         Welcome To My Website

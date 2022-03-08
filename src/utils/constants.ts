@@ -23,14 +23,7 @@ const FOOTER_LINKS = [
   },
 ];
 
-const SECTIONS = [
-  'header',
-  'about',
-  'service',
-  'resume',
-  'portfolio',
-  'contact',
-];
+const SECTIONS = ['home', 'about', 'service', 'resume', 'portfolio', 'contact'];
 
 const SERVICES = [
   {

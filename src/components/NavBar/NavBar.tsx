@@ -26,7 +26,7 @@ const NavBar: React.FC = () => {
       id='mainNav'
     >
       <div className='container flex flex-row items-center justify-between mx-auto'>
-        <Link href='#header'>
+        <Link href='#home'>
           <a className='text-[28px] font-extrabold'>
             <span className='text-purple-600'>Ra</span>poso
           </a>
