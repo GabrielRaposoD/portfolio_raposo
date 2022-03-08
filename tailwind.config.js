@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./src/{components,pages,layout,screens}/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/{components,pages,layout,screens}/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     fontFamily: {
       teko: ['Teko'],
@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'header-bg': "url('/images/fox-bg.png')",
+        'contact-bg': "url('/images/contact-bg.png')",
       },
       colors: {
         lightGray: '#191C22',
