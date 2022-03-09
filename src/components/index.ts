@@ -5,7 +5,7 @@ export { Resume } from './Resume';
 export { Portfolio } from './Portfolio';
 export { MyService } from './MyService';
 export { Contact } from './Contact';
-export { FooterIcon } from './FooterIcon';
+export { IconLink } from './IconLink';
 export { OutlinedAnchor } from './OutlinedAnchor';
 export { NavBar } from './NavBar';
 export { SectionTitle } from './SectionTitle';

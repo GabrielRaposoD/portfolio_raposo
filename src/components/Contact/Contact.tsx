@@ -1,11 +1,11 @@
 import * as yup from 'yup';
 
-import { SectionTitle } from 'components';
-import { CustomInput } from 'components/CustomInput';
-
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+
 import { ActionButton } from 'components/ActionButton';
+import { CustomInput } from 'components/CustomInput';
+import { SectionTitle } from 'components';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 type contactInputs = {
   email: string;

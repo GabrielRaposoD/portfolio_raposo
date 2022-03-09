@@ -1,9 +1,5 @@
 import Link from 'next/link';
-
-interface OutlinedAnchorProps {
-  id: string;
-  text: string;
-}
+import { OutlinedAnchorProps } from 'typings/global';
 
 const OutlinedAnchor: React.FC<OutlinedAnchorProps> = ({ id, text }) => {
   return (

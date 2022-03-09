@@ -1,7 +1,13 @@
-import { FooterIcon } from 'components';
-import { FOOTER_LINKS } from 'utils/constants';
+import { IconLink } from 'components';
+import { IconLinkProps } from 'typings/global';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  links: IconLinkProps[];
+  copyright: string;
+  madeBy: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ links, copyright, madeBy }) => {
   const year = new Date().getFullYear();
 
   return (
@@ -9,9 +15,9 @@ const Footer: React.FC = () => {
       <div className=' container flex flex-col items-center justify-center mx-auto'>
         <nav>
           <ul className='gap-x-5 flex flex-row mb-5'>
-            {FOOTER_LINKS.map((item, i) => (
-              <li key={i}>
-                <FooterIcon
+            {links.map((item, i) => (
+              <li key={item.href + i}>
+                <IconLink
                   href={item.href}
                   Icon={item.Icon}
                   title={item.title}
@@ -21,9 +27,9 @@ const Footer: React.FC = () => {
           </ul>
         </nav>
         <p className='font-sans text-sm leading-6'>
-          Copyright © {year} - All Rights Reserved.
+          Copyright © {year} - {copyright}.
         </p>
-        <p className='text-sm leading-6'>Designed by Gabriel Raposo.</p>
+        <p className='text-sm leading-6'>{madeBy}</p>
       </div>
     </footer>
   );

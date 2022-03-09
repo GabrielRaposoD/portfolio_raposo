@@ -1,12 +1,5 @@
+import { ResumeItemProps } from 'typings/global';
 import cs from 'clsx';
-
-interface ResumeItemProps {
-  title: string;
-  description: string;
-  startDate: string | number;
-  endDate: string | number;
-  last: boolean;
-}
 
 const ResumeItem: React.FC<ResumeItemProps> = ({
   title,

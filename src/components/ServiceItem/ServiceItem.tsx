@@ -1,10 +1,4 @@
-import { IconType } from 'react-icons';
-
-interface ServiceItemProps {
-  title: string;
-  description: string;
-  Icon: IconType;
-}
+import { ServiceItemProps } from 'typings/global';
 
 const ServiceItem: React.FC<ServiceItemProps> = ({
   title,

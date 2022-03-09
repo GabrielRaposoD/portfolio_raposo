@@ -10,7 +10,10 @@ interface CustomInputProps {
 }
 
 type CustomInputType = CustomInputProps &
-  (React.InputHTMLAttributes<any> | React.TextareaHTMLAttributes<any>);
+  (
+    | React.InputHTMLAttributes<HTMLInputElement>
+    | React.TextareaHTMLAttributes<HTMLTextAreaElement>
+  );
 
 const Element = forwardRef((props: any, ref) => {
   return createElement(props.type === 'textarea' ? 'textarea' : 'input', {

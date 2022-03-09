@@ -1,10 +1,13 @@
 import Link from 'next/link';
-import { SECTIONS } from 'utils/constants';
 import cs from 'clsx';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useState } from 'react';
 
-const NavBar: React.FC = () => {
+interface NavBarProps {
+  sectionsName: string[];
+}
+
+const NavBar: React.FC<NavBarProps> = ({ sectionsName }) => {
   const [isBlur, setIsBlur] = useState<boolean>(false);
 
   useScrollPosition(({ currPos }) => {
@@ -32,8 +35,8 @@ const NavBar: React.FC = () => {
           </a>
         </Link>
         <ul className='flex flex-row gap-x-2.5 text-sm leading-6 font-medium tracking-[0.5px]'>
-          {SECTIONS.map((s) => (
-            <li key={s}>
+          {sectionsName.map((s, i) => (
+            <li key={s + i}>
               <Link href={`#${s}`}>
                 <a className='p-2 capitalize'>{s}</a>
               </Link>

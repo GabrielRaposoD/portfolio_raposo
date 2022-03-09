@@ -1,32 +1,43 @@
-import { FOOTER_LINKS } from 'utils/constants';
+import { IconLinkProps, OutlinedAnchorProps } from 'typings/global';
+
 import Link from 'next/link';
 import { OutlinedAnchor } from 'components';
 import Typewriter from 'typewriter-effect';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  links: IconLinkProps[];
+  labels: {
+    welcome: string;
+    typewriterBase: string;
+    typewriter: string[];
+  };
+  anchors: OutlinedAnchorProps[];
+}
+
+const Header: React.FC<HeaderProps> = ({ links, labels, anchors }) => {
   return (
     <header
       className='bg-black w-full pt-[100px] items-center justify-center flex flex-col text-lg bg-header-bg bg-no-repeat min-h-[660px] bg-cover bg-fixed bg-center'
       id='home'
     >
       <h3 className='uppercase font-medium tracking-[3px] mb-[25px]'>
-        Welcome To My Website
+        {labels.welcome}
       </h3>
       <h3 className='flex flex-row mb-5 text-6xl font-bold whitespace-pre leading-[1.3]'>
-        <span>I'm</span>
+        <span>{labels.typewriterBase}</span>
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .typeString(' Gabriel Raposo')
+              .typeString(labels.typewriter[0])
               .pauseFor(1000)
               .deleteAll()
-              .typeString(' a Software Engineer')
+              .typeString(labels.typewriter[1])
               .pauseFor(1000)
               .deleteAll()
-              .typeString(' a React Specialist')
+              .typeString(labels.typewriter[2])
               .pauseFor(1000)
               .deleteAll()
-              .typeString(' a Fullstack Developer')
+              .typeString(labels.typewriter[3])
               .pauseFor(1000)
               .start();
           }}
@@ -40,14 +51,14 @@ const Header: React.FC = () => {
       </h3>
       <nav className='mb-[25px]'>
         <ul className='gap-x-4 flex flex-row'>
-          {FOOTER_LINKS.map((item, i) => (
+          {links.map((item, i) => (
             <li
               key={i}
               className='hover:opacity-50 transition-all duration-[400ms]'
             >
               <Link href={item.href}>
                 <a target='_blank'>
-                  <item.Icon />
+                  <item.Icon title={item.title} />
                 </a>
               </Link>
             </li>
@@ -55,8 +66,13 @@ const Header: React.FC = () => {
         </ul>
       </nav>
       <div className='flex flex-row gap-x-[15px]'>
-        <OutlinedAnchor id='portfolio' text='View Work' />
-        <OutlinedAnchor id='contact' text='Hire Me' />
+        {anchors.map((anchor, i) => (
+          <OutlinedAnchor
+            id={anchor.id}
+            text={anchor.text}
+            key={anchor.id + i}
+          />
+        ))}
       </div>
     </header>
   );
