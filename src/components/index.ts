@@ -13,3 +13,5 @@ export { ActionButton } from './ActionButton';
 export { ServiceItem } from './ServiceItem';
 export { ResumeItem } from './ResumeItem';
 export { CustomInput } from './CustomInput';
+export { PortfolioItem } from './PortfolioItem';
+export { PortfolioCard } from './PortfolioCard';

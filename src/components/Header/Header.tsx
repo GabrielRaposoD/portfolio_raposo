@@ -3,6 +3,7 @@ import { IconLinkProps, OutlinedAnchorProps } from 'typings/global';
 import Link from 'next/link';
 import { OutlinedAnchor } from 'components';
 import Typewriter from 'typewriter-effect';
+import { useCallback } from 'react';
 
 interface HeaderProps {
   links: IconLinkProps[];
@@ -23,25 +24,12 @@ const Header: React.FC<HeaderProps> = ({ links, labels, anchors }) => {
       <h3 className='uppercase font-medium tracking-[3px] mb-[25px]'>
         {labels.welcome}
       </h3>
-      <h3 className='flex flex-row mb-5 text-6xl font-bold whitespace-pre leading-[1.3]'>
+      <h3 className='flex flex-row mb-5 lg:text-6xl text-2xl font-bold whitespace-pre leading-[1.3]'>
         <span>{labels.typewriterBase}</span>
         <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString(labels.typewriter[0])
-              .pauseFor(1000)
-              .deleteAll()
-              .typeString(labels.typewriter[1])
-              .pauseFor(1000)
-              .deleteAll()
-              .typeString(labels.typewriter[2])
-              .pauseFor(1000)
-              .deleteAll()
-              .typeString(labels.typewriter[3])
-              .pauseFor(1000)
-              .start();
-          }}
           options={{
+            strings: [...labels.typewriter],
+            autoStart: true,
             delay: 75,
             deleteSpeed: 75,
             loop: true,

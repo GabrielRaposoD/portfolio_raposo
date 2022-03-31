@@ -14,12 +14,15 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = ({ title, labels }) => {
   return (
-    <section className='bg-lighterGray w-full py-[100px]' id='about'>
+    <section
+      className='bg-lighterGray w-full py-[100px] px-8 xl:px-0 '
+      id='about'
+    >
       <div className='container flex flex-col items-center justify-center mx-auto'>
         <SectionTitle title={title} />
-        <div className='flex flex-row gap-x-[30px] items-center'>
-          <div className='h-[421px] w-[540px]  bg-white' />
-          <div className='flex flex-col max-w-[540px]'>
+        <div className='flex flex-col lg:flex-row gap-y-4 gap-x-[30px] items-center'>
+          <div className='h-[421px] lg:w-[540px] w-full bg-white' />
+          <div className='flex flex-col lg:max-w-[540px] w-full'>
             <h3 className='text-[25px] font-bold leading-[1.3] mb-2.5'>
               {labels.name} <span className='text-purple-500'>Raposo</span>
             </h3>

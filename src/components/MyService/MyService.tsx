@@ -16,14 +16,14 @@ interface MyServiceProps {
 
 const MyService: React.FC<MyServiceProps> = ({ title, services }) => {
   return (
-    <section className='bg-gray w-full py-[100px]' id='service'>
+    <section className='bg-gray w-full py-[100px] px-8 xl:px-0' id='services'>
       <div className='container flex flex-col items-center justify-center w-full mx-auto'>
         <SectionTitle title={title} />
 
         <Swiper
           className='mySwiper'
-          slidesPerView={3}
-          slidesPerGroup={3}
+          slidesPerView={1}
+          slidesPerGroup={1}
           loop={true}
           spaceBetween={30}
           freeMode={true}
@@ -35,6 +35,17 @@ const MyService: React.FC<MyServiceProps> = ({ title, services }) => {
             clickable: true,
           }}
           modules={[FreeMode, Pagination, Autoplay]}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+            769: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+              spaceBetween: 40,
+            },
+          }}
         >
           {services.map((service, i) => (
             <SwiperSlide key={service.title + i}>

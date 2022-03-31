@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import { Section } from 'typings/global';
 import cs from 'clsx';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useState } from 'react';
 
 interface NavBarProps {
-  sectionsName: string[];
+  sections: Section[];
 }
 
-const NavBar: React.FC<NavBarProps> = ({ sectionsName }) => {
+const NavBar: React.FC<NavBarProps> = ({ sections }) => {
   const [isBlur, setIsBlur] = useState<boolean>(false);
 
   useScrollPosition(({ currPos }) => {
@@ -21,7 +22,7 @@ const NavBar: React.FC<NavBarProps> = ({ sectionsName }) => {
   return (
     <nav
       className={cs(
-        'fixed top-0 w-full bg-transparent py-[25px] bg-opacity-100 z-50 transition-all duration-500',
+        'fixed top-0 w-full bg-transparent py-[25px] bg-opacity-100 z-50 transition-all duration-500 border-t-4 border-purple-600 border-solid px-8 xl:px-0',
         {
           'bg-blur border-opacity-60': isBlur,
         }
@@ -34,11 +35,11 @@ const NavBar: React.FC<NavBarProps> = ({ sectionsName }) => {
             <span className='text-purple-600'>Ra</span>poso
           </a>
         </Link>
-        <ul className='flex flex-row gap-x-2.5 text-sm leading-6 font-medium tracking-[0.5px]'>
-          {sectionsName.map((s, i) => (
-            <li key={s + i}>
-              <Link href={`#${s}`}>
-                <a className='p-2 capitalize'>{s}</a>
+        <ul className='md:flex flex-row gap-x-2.5 text-sm leading-6 font-medium tracking-[0.5px] hidden'>
+          {sections.map((s, i) => (
+            <li key={s.id + i}>
+              <Link href={`#${s.id}`}>
+                <a className='p-2 capitalize'>{s.name}</a>
               </Link>
             </li>
           ))}

@@ -9,11 +9,30 @@ import {
   Resume,
 } from 'components';
 import {
+  RiCloudy2Line,
   RiGithubLine,
   RiInstagramLine,
   RiLinkedinLine,
+  RiSearchLine,
+  RiShareLine,
+  RiSmartphoneLine,
   RiTerminalBoxLine,
 } from 'react-icons/ri';
+
+const SEO = {
+  'pt-BR': {
+    title: 'Gabriel Raposo | Desenvolvedor Web | Engenheiro de Software',
+    description:
+      'Bem vindo ao meu portfólio, eu sou um Engenheiro de Software com anos de experiência e ênfase em Desenvolvimento Web do início ao fim, aprenda um pouco mais sobre mim aqui.',
+    name: 'Gabriel Raposo Portfólio',
+  },
+  'en-US': {
+    title: 'Gabriel Raposo | Software Engineer',
+    description:
+      "Welcome to my portfolio, I'm a Software Engineer with years of experience and an emphasis on Web Development from start to finish, learn a little more about me here.",
+    name: 'Gabriel Raposo Portfolio',
+  },
+};
 
 const SECTIONS = {
   Components: [
@@ -22,23 +41,23 @@ const SECTIONS = {
       position: 1,
       props: {
         'en-US': {
-          sectionsName: [
-            'home',
-            'about',
-            'services',
-            'resume',
-            'portfolio',
-            'contact',
+          sections: [
+            { name: 'home', id: 'home' },
+            { name: 'about', id: 'about' },
+            { name: 'services', id: 'services' },
+            { name: 'resume', id: 'resume' },
+            { name: 'portfolio', id: 'portfolio' },
+            { name: 'contact', id: 'contact' },
           ],
         },
         'pt-BR': {
-          sectionsName: [
-            'início',
-            'sobre',
-            'serviços',
-            'currículo',
-            'portfólio',
-            'contato',
+          sections: [
+            { name: 'início', id: 'home' },
+            { name: 'sobre', id: 'about' },
+            { name: 'serviços', id: 'services' },
+            { name: 'currículo', id: 'resume' },
+            { name: 'portfólio', id: 'portfolio' },
+            { name: 'contato', id: 'contact' },
           ],
         },
       },
@@ -48,6 +67,7 @@ const SECTIONS = {
       position: 2,
       props: {
         'en-US': {
+          id: 'home',
           labels: {
             welcome: 'Welcome To My Website',
             typewriterBase: "I'm",
@@ -81,12 +101,13 @@ const SECTIONS = {
           ],
         },
         'pt-BR': {
+          id: 'início',
           labels: {
             welcome: 'Bem vindo ao meu Site',
             typewriterBase: 'Eu sou',
             typewriter: [
               ' Gabriel Raposo',
-              ' a Engenherio de Software',
+              ' Engenherio de Software',
               ' Especialista em React',
               ' Desenvolvedor Fullstack',
             ],
@@ -149,34 +170,34 @@ const SECTIONS = {
           title: 'My Services',
           services: [
             {
-              title: 'Web Development',
+              title: 'Fullstack Development',
               description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+                'Using the best tecnology saves you the budget for spending with meaninfull things, how can I use the best tecnology to help you?',
               Icon: RiTerminalBoxLine,
             },
             {
-              title: 'Web Development',
+              title: 'Cloud Services',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              Icon: RiTerminalBoxLine,
+              Icon: RiCloudy2Line,
             },
             {
-              title: 'Web Development',
+              title: 'Mobile Responsive',
               description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              Icon: RiTerminalBoxLine,
+                'Smartphones are everywhere in our life and may be the first contact with your brand and I can help you toward this new step!',
+              Icon: RiSmartphoneLine,
             },
             {
-              title: 'Web Development',
+              title: 'SEO Optimization',
               description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              Icon: RiTerminalBoxLine,
+                'Being sure that the best keywords are being used is the way to highlight yourself amoung others and get more traffic within the search engines.',
+              Icon: RiSearchLine,
             },
             {
-              title: 'Web Development',
+              title: 'Fast Comunication',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              Icon: RiTerminalBoxLine,
+              Icon: RiShareLine,
             },
           ],
         },
@@ -193,25 +214,25 @@ const SECTIONS = {
               title: 'Web Development',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              Icon: RiTerminalBoxLine,
+              Icon: RiCloudy2Line,
+            },
+            {
+              title: 'Mobile Responsive',
+              description:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+              Icon: RiSmartphoneLine,
             },
             {
               title: 'Web Development',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              Icon: RiTerminalBoxLine,
+              Icon: RiSearchLine,
             },
             {
               title: 'Web Development',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              Icon: RiTerminalBoxLine,
-            },
-            {
-              title: 'Web Development',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              Icon: RiTerminalBoxLine,
+              Icon: RiShareLine,
             },
           ],
         },
@@ -228,8 +249,8 @@ const SECTIONS = {
               title: 'Web Development',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              startDate: '2020',
-              endDate: '2021',
+              startDate: '2017',
+              endDate: 'CURRENT',
             },
             {
               title: 'Web Development',
@@ -251,25 +272,25 @@ const SECTIONS = {
           title: 'Trabalho e Educação',
           timeline: [
             {
-              title: 'Web Development',
+              title: 'Engenheiro de Software',
+              description:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
+              startDate: '2017',
+              endDate: 'ATUAL',
+            },
+            {
+              title: 'Exsign',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
               startDate: '2020',
               endDate: '2021',
             },
             {
-              title: 'Web Development',
+              title: 'Bacharelado em Ciência da Computação',
               description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              startDate: '2020',
-              endDate: '2021',
-            },
-            {
-              title: 'Web Development',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore.',
-              startDate: '2020',
-              endDate: '2021',
+                'Formando em Ciência da Computação pela Universidade Católica de Brasília (UCB), Monitor de diversas matérias relacionadas a lógica de programação, algoritmos, estrutura de dados e computação, Bolsista do projeto E-Lixo, Participante do projeto de Alfabetização Digital, Expositor na SNCT 2019 e Voluntário na CBIE 2019',
+              startDate: '2018',
+              endDate: '2022',
             },
           ],
         },
@@ -281,8 +302,74 @@ const SECTIONS = {
       props: {
         'en-US': {
           title: 'Portfolio',
+          portfolioItems: [
+            {
+              id: 'akio',
+              category: 'Concept',
+              title: 'Akio',
+              description: '#CC555B',
+            },
+          ],
         },
-        'pt-BR': { title: 'Portfólio' },
+        'pt-BR': {
+          title: 'Portfólio',
+          portfolioItems: [
+            {
+              id: 'akio',
+              category: 'Concept',
+              title: 'Akio',
+              description: '#CC555B',
+            },
+            {
+              id: 'bayer',
+              category: 'Freelance',
+              title: 'Smart Bayer',
+              description: '#CC555B',
+            },
+            {
+              id: 'bayer2',
+              category: 'Freelance',
+              title: 'Smart Bayer 2',
+              description: '#CC555B',
+            },
+            {
+              id: 'saintgobain',
+              category: 'Freelance',
+              title: 'Smart Saint Gobain',
+              description: '#CC555B',
+            },
+            {
+              id: 'casasbahia',
+              category: 'Landing Page',
+              title: 'Retira Casas Bahia',
+              description: '#CC555B',
+            },
+            {
+              id: 'extra',
+              category: 'Landing Page',
+              title: 'Retira Extra',
+              description: '#CC555B',
+            },
+            {
+              id: 'pontofrio',
+              category: 'Landing Page',
+              title: 'Retira Ponto Frio',
+              description: '#CC555B',
+            },
+            {
+              id: 'guio',
+              category: 'Work',
+              title: 'Guio',
+              description: '#CC555B',
+            },
+            {
+              id: 'shortener',
+              category: 'Project',
+              title: 'Encurtador de URL',
+              description: '#CC555B',
+            },
+          ],
+        },
       },
     },
     {
@@ -291,8 +378,18 @@ const SECTIONS = {
       props: {
         'en-US': {
           title: 'Get In Touch',
+          namePlaceholder: 'Name',
+          subjectPlaceholder: 'Subject',
+          messagePlaceholder: 'Message',
+          button: 'Send Message',
         },
-        'pt-BR': { title: 'Entre em Contato' },
+        'pt-BR': {
+          title: 'Entre em Contato',
+          namePlaceholder: 'Nome',
+          subjectPlaceholder: 'Assunto',
+          messagePlaceholder: 'Menssagem',
+          button: 'Enviar Menssagem',
+        },
       },
     },
     {
@@ -346,4 +443,4 @@ const SECTIONS = {
   ],
 };
 
-export { SECTIONS };
+export { SECTIONS, SEO };

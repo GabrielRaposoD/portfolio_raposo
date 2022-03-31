@@ -10,7 +10,10 @@ interface ResumeProps {
 const Resume: React.FC<ResumeProps> = ({ title, timeline }) => {
   const lastIndex = timeline.length - 1;
   return (
-    <section className='bg-lighterGray w-full py-[100px]' id='resume'>
+    <section
+      className='bg-lighterGray w-full py-[100px] px-8 xl:px-0'
+      id='resume'
+    >
       <div className='container flex flex-col items-center justify-center mx-auto'>
         <SectionTitle title={title} />
         <div className='bg-gray flex flex-col p-[30px]'>

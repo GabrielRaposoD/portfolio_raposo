@@ -27,7 +27,7 @@ const Footer: React.FC<FooterProps> = ({ links, copyright, madeBy }) => {
           </ul>
         </nav>
         <p className='font-sans text-sm leading-6'>
-          Copyright © {year} - {copyright}.
+          Copyright © {year} - {copyright}
         </p>
         <p className='text-sm leading-6'>{madeBy}</p>
       </div>

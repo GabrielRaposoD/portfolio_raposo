@@ -7,6 +7,14 @@ import { CustomInput } from 'components/CustomInput';
 import { SectionTitle } from 'components';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+interface ContactProps {
+  title: string;
+  namePlaceholder: string;
+  subjectPlaceholder: string;
+  messagePlaceholder: string;
+  button: string;
+}
+
 type contactInputs = {
   email: string;
   name: string;
@@ -23,7 +31,13 @@ const contactSchema = yup
   })
   .required();
 
-const Contact: React.FC = () => {
+const Contact: React.FC<ContactProps> = ({
+  button,
+  messagePlaceholder,
+  namePlaceholder,
+  subjectPlaceholder,
+  title,
+}) => {
   const {
     register,
     handleSubmit,
@@ -34,22 +48,25 @@ const Contact: React.FC = () => {
 
   return (
     <section
-      className='bg-lighterGray w-full py-[100px] bg-contact-bg bg-no-repeat bg-cover'
+      className='bg-lighterGray w-full py-[100px] bg-contact-bg bg-no-repeat bg-cover px-8 xl:px-0'
       id='contact'
     >
       <div className='container flex flex-col items-center justify-center mx-auto'>
-        <SectionTitle title='Get In Touch' />
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col w-1/2'>
-          <div className='gap-x-8 flex flex-row w-full'>
+        <SectionTitle title={title} />
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className='lg:w-1/2 flex flex-col w-full'
+        >
+          <div className='gap-x-8 lg:flex-row flex flex-col w-full'>
             <CustomInput
               type='text'
-              placeholder='Name'
+              placeholder={namePlaceholder}
               {...register('name')}
               error={errors.name}
             />
             <CustomInput
               type='text'
-              placeholder='Subject'
+              placeholder={subjectPlaceholder}
               {...register('subject')}
               error={errors.subject}
             />
@@ -62,13 +79,13 @@ const Contact: React.FC = () => {
           />
           <CustomInput
             type='textarea'
-            placeholder='Message'
+            placeholder={messagePlaceholder}
             {...register('message')}
             error={errors.message}
             rows={7}
           />
           <hr className='w-0 h-0 mb-8' />
-          <ActionButton text='SEND MESSAGE' />
+          <ActionButton text={button} />
         </form>
       </div>
     </section>

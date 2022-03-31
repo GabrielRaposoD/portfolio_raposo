@@ -10,18 +10,30 @@ type IconLinkProps = {
   Icon: IconType;
 };
 
-interface OutlinedAnchorProps {
+type PortfolioItem = {
+  id: string;
+  category: string;
+  title: string;
+  description: string;
+};
+
+type OutlinedAnchorProps = {
   id: string;
   text: string;
-}
+};
 
-interface ResumeItemProps {
+type ResumeItemProps = {
   title: string;
   description: string;
   startDate: string | number;
   endDate: string | number;
   last: boolean;
-}
+};
+
+type Section = {
+  name: string;
+  id: string;
+};
 
 export type {
   LocalesKeys,
@@ -29,4 +41,6 @@ export type {
   IconLinkProps,
   OutlinedAnchorProps,
   ResumeItemProps,
+  PortfolioItem,
+  Section,
 };
